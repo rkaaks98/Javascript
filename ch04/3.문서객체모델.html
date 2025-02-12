@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>3.문서객체모델</title>
+        <!--
+            날짜 : 2025/02/12
+            이름 : 김준서
+            내용 : 자바스크립트 DOM(문서객체모델) 실습하기
+        -->
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                display: inline-block;
+            }
+            .red {background-color: red;}
+            .green {background-color: green;}
+            .blue {background-color: blue;}
+        </style>
+
+    </head>
+    <body>
+        <h3>3.문서객체모델</h3>
+
+        <h4>문서객체 선택</h4>
+        <ul id="seoul">
+            <li>
+                <span>서울</span>
+                <ol>
+                    <li><i>용산</i></li>
+                    <li><i>명동</i></li>
+                    <li><i>종로</i></li>
+                    <li><i>신촌</i></li>
+                    <li><i>강남</i></li>
+                </ol>
+            </li>
+            <li>대전</li>
+            <li id="daegu">대구</li>
+            <li>
+                <span>부산</span>
+                <ol>
+                    <li class="busan">서면</li>
+                    <li class="busan">해운대</li>
+                    <li class="busan">광안리</li>
+                </ol>
+            </li>
+            <li class="gwangju">광주</li>
+        </ul>
+
+        <script>
+            //문서객체 선택
+            const h3 = document.querySelector('h3');
+            h3.style.color = 'red';
+
+            const span = document.querySelector('#seoul > span');
+            span.style.color = 'blue';
+
+            const li = document.querySelector('ul > li:nth-child(2)');
+            li.style.color = 'green';
+
+            const busanAll = document.querySelectorAll('.busan');
+            busanAll.style.color = 'orange';
+            busanAll[0].style.color = 'gray';
+            busanAll[1].style.color = 'gray';
+            busanAll[2].style.color = 'gray';
+
+            const daegu = document.getElementById('daegu');
+            daegu.style.color = 'brown'
+
+            const seouls = document.getElementsByTagName('i');
+            for(const seoul of seouls){
+                seoul.style.background = 'yellow';
+            }
+
+            const gwangju = document.getElementsByClassName('busan');
+            gwangju[0].style.color = 'lime';
+        </script>
+
+        <h4>문서객체 선택</h4>
+        <img>
+        <img>
+
+        <hr>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+
+        <ul id="city">
+            <li>서울</li>
+            <li>대전</li>
+            <li>대구</li>
+            <li>부산</li>
+            <li>광주</li>
+        </ul>
+
+        <div class="content"></div>
+        <div class="content"></div>
+
+        <div class="box red">box1</div>
+        <div class="box green">box2</div>
+        <div class="box blue">box3</div>
+
+        <script>
+            //문서객체 조작
+            const images = document.querySelectorAll('img');
+            images[0].src = './images/flower1.jpg';
+            images[0].alt = '벗꽃';
+
+            images[1].src = './images/flower2.jpg';
+            images[1].alt = '코스모스';
+        </script>
+
+
+        <h4>문서객체 조작</h4>
+
+
+
+        <h4>문서객체 추가/이동</h4>
+
+
+
+        <h4>문서객체 생성/삭제</h4>
+
+
+
+        
+        
+    </body>
+</html>
