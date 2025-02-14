@@ -25,8 +25,8 @@
         <h3>3.문서객체모델</h3>
 
         <h4>문서객체 선택</h4>
-        <ul id="seoul">
-            <li>
+        <ul>
+            <li id="seoul">
                 <span>서울</span>
                 <ol>
                     <li><i>용산</i></li>
@@ -60,8 +60,10 @@
             const li = document.querySelector('ul > li:nth-child(2)');
             li.style.color = 'green';
 
+            const busan = document.querySelector('.busan');
+            busan.style.color = 'orange';
+
             const busanAll = document.querySelectorAll('.busan');
-            busanAll.style.color = 'orange';
             busanAll[0].style.color = 'gray';
             busanAll[1].style.color = 'gray';
             busanAll[2].style.color = 'gray';
